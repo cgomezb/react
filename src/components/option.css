@@ -1,0 +1,11 @@
+.option {
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid;
+  display: block;
+  width: 100%;
+}
+
+.selected {
+  background-color: burlywood;
+}

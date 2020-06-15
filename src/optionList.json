@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Option 1",
+    "select": false
+  },
+  {
+    "id": 2,
+    "name": "Option 2",
+    "select": false
+  },
+  {
+    "id": 3,
+    "name": "Option 3",
+    "select": false
+  },
+  {
+    "id": 4,
+    "name": "Option 4",
+    "select": false
+  },
+  {
+    "id": 5,
+    "name": "Option 5",
+    "select": false
+  }
+]
