@@ -1,12 +1,14 @@
 import React from 'react';
-import './index.css';
+import { Route } from 'react-router-dom';
 import optionList from './optionList.json'
 import Options from './components/options';
+import NavBar from './components/navbar/navbar';
+import Menu from './components/menu/menu';
+import './index.css';
 
 class App extends React.Component {
   state = {
     title: 'List of Options',
-    emptyListMessage: 'You don\'t have a menu',
     optionList: optionList
   }
 
@@ -19,7 +21,7 @@ class App extends React.Component {
       return (
         <div>
           <p>
-            {this.state.emptyListMessage}
+            You don't have a menu
           </p>
           <button
             onClick={this.handleCreateNewMenu}>Create new
@@ -48,10 +50,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <Options
-        options={this.state.optionList}
-        onSelect={this.handleSelected}
+      <React.Fragment>
+      <NavBar />
+      <Route 
+        path="/options"
+        component={() => <Options options={this.state.optionList} onSelect={this.handleSelected} />} 
       />
+      <Route 
+        path="/menu"
+        component={Menu}
+      />
+      </React.Fragment>
     );
   }
 }

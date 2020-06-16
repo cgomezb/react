@@ -4,11 +4,11 @@ import './option.css';
 class Option extends React.Component {
   render() {
     return (
-      <button
+      <div
         className={this.getOptionClasses()}
         onClick={() => this.props.onSelect(this.props.option)}>
         {this.props.option.name}
-      </button>
+      </div>
     );
   }
 
